@@ -11,7 +11,7 @@
     "lint:fix": "pnpm --filter frontend lint:fix",
     "format": "pnpm --filter frontend format",
     "format:check": "pnpm --filter frontend format:check",
-    "prepare": "husky"
+    "prepare": "cd .. && husky"
   },
   "devDependencies": {
     "husky": "^9.1.7"
