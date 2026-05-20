@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import SiteHeader from "@/components/SiteHeader";
+
 export default function LoginPage() {
   return (
     <main className="bg-brand-navy text-text-primary relative min-h-screen overflow-hidden">
@@ -10,24 +12,7 @@ export default function LoginPage() {
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(16_25_54_/_0.98)_0%,rgb(16_25_54_/_0.9)_48%,rgb(16_25_54_/_0.72)_100%)]" />
 
-      <header className="relative z-10 mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="홈으로 이동">
-          <span className="bg-brand-cream text-brand-navy grid size-10 place-items-center rounded-full text-sm font-black">
-            HI
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="typo-brand">Hongik University</span>
-            <span className="text-text-muted mt-1 text-xs font-semibold">Festival Platform</span>
-          </span>
-        </Link>
-
-        <Link
-          href="/"
-          className="rounded-full border border-white/16 px-4 py-2 text-sm font-bold text-white/80 transition hover:bg-white/10 hover:text-white"
-        >
-          홈으로
-        </Link>
-      </header>
+      <SiteHeader actionHref="/" actionLabel="홈으로" />
 
       <section className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1fr] lg:px-8">
         <div className="hidden max-w-xl lg:block">

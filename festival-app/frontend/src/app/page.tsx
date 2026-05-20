@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import SiteHeader from "@/components/SiteHeader";
+
 const serviceLinks = [
   {
     href: "/performances",
@@ -34,41 +36,7 @@ const serviceLinks = [
 export default function Home() {
   return (
     <main className="bg-brand-navy text-text-primary min-h-screen">
-      <header className="border-line-subtle bg-brand-navy/78 fixed inset-x-0 top-0 z-50 border-b shadow-[0_10px_40px_rgba(0,0,0,0.18)] backdrop-blur-xl">
-        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="와우 페스티벌 홈">
-            <span className="bg-brand-cream text-brand-navy shadow-brand-cream/20 grid size-10 place-items-center rounded-full text-sm font-black shadow-lg">
-              HI
-            </span>
-            <span className="flex flex-col leading-none">
-              <span className="typo-brand">Hongik University</span>
-              <span className="text-text-muted mt-1 text-xs font-semibold">Festival Platform</span>
-            </span>
-          </Link>
-
-          <nav className="hidden items-center gap-7 text-sm font-semibold text-white/72 md:flex">
-            <Link className="hover:text-brand-coral-soft transition" href="/performances">
-              공연
-            </Link>
-            <Link className="hover:text-brand-mint-soft transition" href="/booths">
-              부스
-            </Link>
-            <Link className="hover:text-brand-yellow-soft transition" href="/schedule">
-              일정
-            </Link>
-            <Link className="hover:text-brand-blue-soft transition" href="/map">
-              안내도
-            </Link>
-          </nav>
-
-          <Link
-            href="/login"
-            className="bg-brand-cream text-brand-navy hover:bg-brand-coral rounded-full px-4 py-2 text-sm font-black shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:text-white sm:px-5"
-          >
-            로그인
-          </Link>
-        </div>
-      </header>
+      <SiteHeader actionHref="/login" actionLabel="로그인" actionVariant="filled" fixed showNav />
 
       <section className="relative min-h-[760px] overflow-hidden pt-16 lg:min-h-[820px] lg:pt-20">
         <div
