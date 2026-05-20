@@ -1,0 +1,1 @@
+pnpm --filter festival-app/frontend lint-staged
