@@ -1,5 +1,85 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-navy: #101936;
+  --color-brand-navy-soft: #17213f;
+  --color-brand-cream: #fff2df;
+  --color-brand-coral: #ff6b4a;
+  --color-brand-coral-soft: #ffb49f;
+  --color-brand-mint: #22b8a7;
+  --color-brand-mint-soft: #8de8dc;
+  --color-brand-yellow: #f6bd38;
+  --color-brand-yellow-soft: #ffd77b;
+  --color-brand-blue: #5b7cfa;
+  --color-brand-blue-soft: #aabfff;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgb(255 255 255 / 0.76);
+  --color-text-muted: rgb(255 255 255 / 0.62);
+  --color-line-subtle: rgb(255 255 255 / 0.15);
+  --color-surface-glass: rgb(255 255 255 / 0.09);
+  --color-surface-glass-hover: rgb(255 255 255 / 0.16);
+
+  --font-sans: Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+
+  --text-display-size: clamp(2.25rem, 7vw, 4.5rem);
+  --text-display-line-height: 1.08;
+  --text-title-size: 2rem;
+  --text-title-line-height: 135%;
+  --text-body-size: 1rem;
+  --text-body-line-height: 2;
+  --text-caption-size: 0.875rem;
+  --text-caption-line-height: 1.6;
+
+  background: var(--color-brand-navy);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--color-brand-navy);
+  font-family: var(--font-sans);
+}
+
+a {
+  text-decoration: none;
+}
+
+.typo-brand {
+  font-size: var(--text-caption-size);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.typo-display {
+  font-size: var(--text-display-size);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: var(--text-display-line-height);
+}
+
+.typo-title {
+  font-size: var(--text-title-size);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: var(--text-title-line-height);
+}
+
+.typo-body {
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+}
+
+.typo-caption {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line-height);
 }
